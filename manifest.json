@@ -1,0 +1,9 @@
+{
+  "display_name": "keepalive 自启",
+  "plugin_id": "keepalive_autostart",
+  "version": "1.1.0",
+  "author": "kinoko-xgya",
+  "description": "Boot-time autostart for the keepalive supervisor, plus a low-frequency watchdog that respawns it if it dies. Idempotent, non-blocking, never breaks plugin loading.",
+  "tags": ["ops", "keepalive", "autostart", "supervisor"],
+  "icon": ""
+}

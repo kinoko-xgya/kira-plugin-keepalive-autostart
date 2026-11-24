@@ -1,0 +1,38 @@
+{
+  "enabled": {
+    "name": "启用插件",
+    "type": "switch",
+    "default": true,
+    "hint": "关掉后 ON_LOADED 不再拉起 keepalive"
+  },
+  "scripts_dir": {
+    "name": "脚本目录",
+    "type": "string",
+    "default": "/app/data/files/scripts",
+    "hint": "keepalive.py 所在目录"
+  },
+  "python_bin": {
+    "name": "Python 路径",
+    "type": "string",
+    "default": "python3",
+    "hint": "用哪个解释器跑 keepalive"
+  },
+  "startup_delay": {
+    "name": "启动延迟（秒）",
+    "type": "integer",
+    "default": 10,
+    "hint": "等框架自身初始化完再拉，避免抢启动期的资源。0 = 立即"
+  },
+  "run_once_after_start": {
+    "name": "拉起后立即跑一轮检查",
+    "type": "switch",
+    "default": true,
+    "hint": "开=顺带执行 keepalive.py --once，把托管脚本当场救回来；关=只保证常驻进程在跑"
+  },
+  "watch_interval": {
+    "name": "自检间隔（秒）",
+    "type": "integer",
+    "default": 600,
+    "hint": "每多少秒扫一次 /proc 看 keepalive 是否还在，不在就拉起。0 = 关闭自检"
+  }
+}
