@@ -43,3 +43,11 @@ KiraAI v3.0.0. No third-party dependencies. Needs `/proc` (Linux) and a local
 ## License
 
 MIT
+
+## Changelog
+
+- **1.1.0** — English comments and log lines; config defaults now read via
+  `None` checks so `0` is honoured; watchdog loop nested in `try` so a single error
+  does not silently end it; `terminate()` made re-entrant.
+- **1.0.0** — Initial release: boot-time autostart, optional `--once` pass,
+  process-presence watchdog.
